@@ -1,0 +1,49 @@
+
+.wrap {
+    display: flex;
+    width: 600px;
+    margin: 0 auto;
+    background-color: pink;
+}
+.img{
+    align-self: flex-start;
+    margin: 10px;
+}
+
+.right{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px;
+    margin-left: 50px;
+}
+
+.inputWrap{
+    margin-bottom: 20px;
+}
+
+.text, .send {
+    line-height: 20px;
+}
+
+.list li {
+    border-bottom: 1px solid gray;
+    padding: 10px 0;
+}
+.list li a{
+    text-decoration: none;
+}
+
+.list li a:link, .list li a:visited {
+    color: blue;
+}
+  
+
+.inputWrap .text {
+    padding:10px;
+    border: 2px solid rgb(73, 41, 10);
+}
+.inputWrap .send {
+    padding: 10px;
+    cursor: pointer;
+    background: #e8a874;
+}
