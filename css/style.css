@@ -1,49 +1,184 @@
+@font-face {
+    font-family: 'PingFangTC-Regular';
+    src: url('../fonts/PingFang-TC-Regular-2.otf') format("truetype");
+}
+
+@font-face {
+    font-family: 'SFNSDisplay';
+    src: url('../fonts/SFNS-Display-Regular.ttf') format("truetype");
+}
 
 .wrap {
-    display: flex;
-    width: 600px;
+    width: 1024px;
     margin: 0 auto;
-    background-color: pink;
-}
-.img{
-    align-self: flex-start;
-    margin: 10px;
 }
 
-.right{
+.header{
+    height: 300px;
     display: flex;
-    flex-direction: column;
-    margin: 30px 0px;
-    margin-left: 50px;
+    align-items: center;
+    justify-content: center;
+    background: #424242;
 }
 
-.inputWrap{
-    margin-bottom: 20px;
+.img{
+    width: 117px;
+    height: 117px;
+    background-image: url("../images/BMICLogo.png");
+    margin-right: 97px;
 }
 
-.text, .send {
-    line-height: 20px;
+.header > main{
+    align-self: flex-start;
+    margin-top: 74px;
+    margin-right: 53px;
+}
+.input-div{
+    margin-bottom: 23px;
 }
 
-.list li {
-    border-bottom: 1px solid gray;
-    padding: 10px 0;
-}
-.list li a{
-    text-decoration: none;
+.input-div > span{
+    display: block;
+    line-height: 18px;
+    font-family: -apple-system,system-ui;
+    font-size: 18px;
+    color: #FFD366;
+    margin-bottom: 7px;
+    user-select: none;
 }
 
-.list li a:link, .list li a:visited {
-    color: blue;
+.input-div > input{
+    width: 250px;
+    height: 40px;
+    line-height: 28px;
+    background: rgba(255,255,255,0.18);
+    border: 2px solid #FFD366;
+    border-radius: 10px;
+    caret-color: white;
+    font-size: 24px;
+    color: white;
+    padding-left: 16px;
 }
-  
 
-.inputWrap .text {
-    padding:10px;
-    border: 2px solid rgb(73, 41, 10);
+.input-div > input::placeholder {
+    font-family: SFNSDisplay;
+    font-size: 24px;
+    color: rgba(255,255,255,0.50);
+    /* transform: translate3d(16px,0px,0) */
 }
-.inputWrap .send {
-    padding: 10px;
+
+.result-btn{
+    width: 120px;
+    height: 120px;
+    background: #FFD366;
+    border-radius:999em;
     cursor: pointer;
-    background: #e8a874;
+    user-select: none;
+}
+.result-btn:hover{
+    background: #FFD366;
+    box-shadow: 0 1px 6px 3px rgba(255,195,49,0.64);
+}
+.result-btn:active{
+    background: #DEA921;
+}
+
+.result-btn > p{
+    font-family: PingFangTC-Regular;
+    font-size: 24px;
+    color: #424242;
+    line-height: 120px;
+    text-align: center;
+}
+
+.main{
+    background: #f5f5f5;
+    width: 100%;
+    height: 634px;
+}
+
+.main > div > h2{
+    font-family: SFNSDisplay;
+    font-size: 24px;
+    color: #424242;
+    line-height: 28px;
+    padding: 48px 0px 36px 0px;
+    text-align: center;
+}
+
+.records{
+    display: grid;
+    grid-gap: 16px;
+    justify-content: center;
+}   
+
+.records > li{
+    display: grid;
+    height: 62px;
+    width: 624px;
+    background-color: #FFFFFF;
+    grid-template-columns: 7px 1fr 1fr 1fr 1fr 1fr;
+    align-items: center
+}   
+
+.records > li > div {
+    text-align: center;
+}
+
+.first{
+    font-family: AppleSystemUIFont;
+    font-size: 12px;
+    color: #424242;
+    vertical-align: middle;
+}
+.second{
+    font-family: SFNSDisplay;
+    font-size: 20px;
+    color: #4A4A4A;
+    vertical-align: middle;
+}
+
+.footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 90px;
+    background: #FFD366;
+}
+
+.footer > img{
+    width: 55px;
+    height: 55px;
+    z-index: 10;
+    user-select: none;
+    filter: url(#change);
+    /* filter: opacity(100%); */
+}
+.color{
+    display: inline-block;
+    width: 7px;
+    height: 62px;
+}
+
+.color-ideal{
+    background: #86D73F;
+    box-shadow: 2px 0 3px 0 rgba(133,215,63,0.29);
+}
+.color-light{
+    background: #31BAF9;
+    box-shadow: 2px 0 3px 0 rgba(49,186,249,0.29);
+}
+.color-heavy{
+    background: #FF982D;
+    box-shadow: 2px 0 3px 0 rgba(255,152,45,0.29);
+}
+.color-light-fat, .color-mod-fat{
+    background: #FF6C02;
+    box-shadow: 2px 0 3px 0 rgba(255,108,2,0.29);
+}
+
+.color-heavy-fat{
+    background: #FF1200;
+    box-shadow: 2px 0 3px 0 rgba(255,17,0,0.29);
 }
