@@ -118,12 +118,13 @@
     height: 62px;
     width: 624px;
     background-color: #FFFFFF;
-    grid-template-columns: 7px 1fr 1fr 1fr 1fr 1fr;
-    align-items: center
+    grid-template-columns: 7px 122px 123px 134px 159px 79px;
+    align-items: center;
 }   
 
-.records > li > div {
-    text-align: center;
+.records > li > div:nth-child(2) {
+    padding-left: 12px;
+    /* text-align: center; */
 }
 
 .first{
@@ -139,6 +140,9 @@
     vertical-align: middle;
 }
 
+.date{
+    letter-spacing: 1.2px;
+}
 .footer{
     display: flex;
     align-items: center;
