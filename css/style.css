@@ -88,6 +88,7 @@
     font-family: SFNSDisplay;
     font-size: 32px;
     margin-bottom: 4px;
+    word-wrap: break-word;
 }
 .inputNode > span:nth-child(2){
     font-family: AppleSystemUIFont;
@@ -133,7 +134,9 @@
 
 .header > footer{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    width: 270px;
 }
 
 .header > footer > p{
